@@ -44,6 +44,13 @@ angular.module('copayApp.services').factory('bitcoincomService', function($http,
     href: 'http://tools.bitcoin.com'
   };
 
+  var faucetItem = {
+    name: 'faucet',
+    title: 'Faucet',
+    icon: 'icon-tools',
+    href: 'http://free.bitcoin.com'
+  };
+
   var _getBitPay = function(endpoint) {
     return {
       method: 'GET',
@@ -74,6 +81,7 @@ angular.module('copayApp.services').factory('bitcoincomService', function($http,
     nextStepsService.register(newsItem);
     nextStepsService.register(poolItem);
     nextStepsService.register(toolsItem);
+    nextStepsService.register(faucetItem);
   };
 
   register();
